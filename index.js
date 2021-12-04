@@ -9,7 +9,7 @@ const h = (tag, props={}, children=[]) => {
     // otherwise just set the attribute
     if(key.startsWith("on")) {
       element.addEventListener(key.substring(2).toLowerCase(), value)
-    } else {
+    } else if(value) {
       element.setAttribute(key, value)
     }
   }
